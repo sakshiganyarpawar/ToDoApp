@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TODo App</title>
-    <style>
-        
-    </style>
-</head>
-<body>
-   <h1>ToDoList</h1> 
-   <div id="tasks-container"></div>
-   <script>
-    const tasks=["Assignment","offline-classes","coding practice","Yoga","Daily skills check"];
-    function loadTasks(){
-        const tasksContainer=document.getElementById('tasks-container');
-        tasksContainer.innerHTML='' ;
-        for(const task of tasks){
-            tasksContainer.innerHTML +=`
-           <div class="todo-item">
-            ${task}
-            </div>
-   `;
-        }
-    }
-    loadTasks();
-   </script>
-</body>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="parent">
+    <h1 class="heading">ToDoList</h1>
+    <div id="tasks-container" class="tasks-container"></div>
+    <div class="input-container">
+    <input type="text" id="input" placeholder="Enter a task"class="input-task">
+    <button onclick="addTask()" class="add-btn">Add task</button>
+  </div>
+</div>
+<script src="logic.js"></script>
+  </body>
 </html>
